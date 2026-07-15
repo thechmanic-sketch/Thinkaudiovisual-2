@@ -1,0 +1,101 @@
+"use client";
+
+import { motion } from "motion/react";
+
+const stats = [
+  { value: "500+", label: "Events delivered" },
+  { value: "150+", label: "Corporate clients" },
+  { value: "12+", label: "Years experience" },
+];
+
+const clients = [
+  "Nedbank",
+  "SABC",
+  "Corporate Conferences",
+  "Community Halls & Churches",
+  "Private Functions",
+];
+
+export function PhotoQuoteStats() {
+  return (
+    <section className="border-b border-border/60 bg-black">
+      {/* Photo placeholder — swap for real event photography */}
+      <div className="relative flex h-[70vh] min-h-[420px] items-end overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#1c1d1e,#0a0b0b_75%)]" />
+        <div className="absolute inset-0 flex items-center justify-center text-xs uppercase tracking-widest text-white/20">
+          Photo placeholder
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent" />
+
+        <motion.blockquote
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="relative mx-auto w-full max-w-7xl px-6 pb-14 text-3xl font-medium leading-tight text-white sm:px-10 sm:text-4xl lg:text-5xl"
+        >
+          &ldquo;Why book for average when you can book to{" "}
+          <span className="font-[family-name:var(--font-accent)] italic text-primary">
+            stand out
+          </span>
+          ?&rdquo;
+        </motion.blockquote>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="max-w-sm text-sm leading-relaxed text-muted-foreground"
+          >
+            Under the management of owner-director T. Masango, Think Audio
+            Visual has spent over a decade building the technical backbone of
+            events across Durban and Southern Africa — from intimate
+            boardrooms to full festival stages.
+          </motion.p>
+
+          <div className="grid grid-cols-3 gap-6 border-t border-border/60 pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+              >
+                <div className="text-3xl font-semibold text-primary sm:text-4xl">
+                  {stat.value}
+                </div>
+                <div className="mt-1 text-xs text-muted-foreground">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <p className="text-sm text-muted-foreground">
+            A selection of{" "}
+            <span className="font-[family-name:var(--font-accent)] italic text-foreground">
+              clients we&apos;ve worked with
+            </span>
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {clients.map((client) => (
+              <span
+                key={client}
+                className="rounded-full border border-border/70 px-4 py-2 text-xs text-foreground/80"
+              >
+                {client}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
