@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #0b0c0d;
+  --foreground: #f2f3f1;
+  --card: #131415;
+  --card-foreground: #f2f3f1;
+  --border: rgba(242, 243, 241, 0.1);
+  --muted-foreground: #9a9d99;
+  --primary: #22c55e;
+  --primary-foreground: #06140a;
+  --accent: #22c55e;
+  --whatsapp: #25d366;
+  --ring: #22c55e;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-whatsapp: var(--whatsapp);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
