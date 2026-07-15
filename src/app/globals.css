@@ -16,12 +16,12 @@
   --border: rgba(230, 245, 238, 0.08);
   --muted-foreground: #93a39b;
 
-  /* Refined emerald accent — replaces the flat neon green */
-  --primary: #10b981;
-  --primary-foreground: #052e1f;
-  --accent: #10b981;
+  /* Logo green — sampled directly from the logo mark */
+  --primary: #29c603;
+  --primary-foreground: #071400;
+  --accent: #29c603;
   --whatsapp: #25d366;
-  --ring: #10b981;
+  --ring: #29c603;
   --radius: 0.75rem;
 }
 
