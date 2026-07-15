@@ -5,8 +5,7 @@ import { Play } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="bg-[radial-gradient(circle_at_20%_10%,rgba(34,197,94,0.06),transparent_60%)] px-3 pb-3 pt-3 sm:px-5 sm:pb-5 sm:pt-5">
-      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[28px] border border-border/60 bg-[#0e0f10] sm:aspect-[16/10] lg:aspect-[16/8]">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-[#0e0f10]">
         {/* Hero video placeholder — swap the div below for a <video> element with the real hero footage */}
         <div className="absolute inset-0">
           <div className="size-full bg-[radial-gradient(circle_at_65%_30%,rgba(34,197,94,0.16),transparent_55%),linear-gradient(180deg,#141515,#0a0b0b)]" />
@@ -23,7 +22,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.625, 0.05, 0, 1] }}
-          className="absolute inset-x-0 bottom-0 flex flex-col gap-4 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-10"
+          className="absolute inset-x-0 bottom-0 flex flex-col gap-4 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-12 lg:p-16"
         >
           <h1 className="max-w-2xl text-4xl font-medium leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
             We build{" "}
@@ -62,11 +61,10 @@ export function HeroSection() {
         </motion.div>
 
         {/* Metadata, top area */}
-        <div className="absolute right-6 top-6 text-right text-xs text-white/50 sm:right-10 sm:top-10">
+        <div className="absolute right-6 top-6 text-right text-xs text-white/50 sm:right-12 sm:top-12 lg:right-16 lg:top-16">
           <div>Durban</div>
           <div>South Africa</div>
         </div>
-      </div>
     </section>
   );
 }
