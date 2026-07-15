@@ -125,7 +125,7 @@ export function HeroSection() {
         >
           <Link
             href="/contact#booking"
-            className="inline-block font-[family-name:var(--font-accent)] text-[3rem] italic leading-tight text-primary underline decoration-primary decoration-2 underline-offset-[0.4em] sm:text-[3.5rem]"
+            className="inline-block font-[family-name:var(--font-accent)] text-[1.8rem] italic leading-tight text-primary underline decoration-primary decoration-2 underline-offset-[0.4em] sm:text-[2.1rem]"
           >
             Book now, Time is Ticking...
           </Link>
