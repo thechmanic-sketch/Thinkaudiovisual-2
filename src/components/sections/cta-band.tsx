@@ -7,7 +7,7 @@ import { whatsappHref } from "@/lib/site-config";
 
 export function CtaBand() {
   return (
-    <section className="border-b border-border/60 bg-card">
+    <section className="border-b border-border/60 bg-[#0f2118]">
       <div className="mx-auto max-w-3xl px-6 py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

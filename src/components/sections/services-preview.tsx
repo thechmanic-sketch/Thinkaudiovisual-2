@@ -26,7 +26,7 @@ const services = [
 
 function ServiceCard({ service }: { service: (typeof services)[number] }) {
   return (
-    <div className="w-[80vw] shrink-0 rounded-2xl border border-border/70 bg-card p-8 sm:w-[45vw] lg:w-[calc(25vw-1.125rem)]">
+    <div className="w-[80vw] shrink-0 rounded-2xl border border-border/70 bg-[#122015] p-8 sm:w-[45vw] lg:w-[calc(25vw-1.125rem)]">
       <span className="text-xs font-medium uppercase tracking-widest text-primary">
         {service.num}
       </span>
@@ -40,7 +40,7 @@ export function ServicesPreview() {
   const loop = [...services, ...services];
 
   return (
-    <section className="border-b border-border/60">
+    <section className="border-b border-border/60 bg-[#0d1710]">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:px-10">
         <div className="max-w-2xl">
           <div className="text-sm font-medium uppercase tracking-widest text-primary">
