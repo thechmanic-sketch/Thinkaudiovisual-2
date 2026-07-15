@@ -118,28 +118,18 @@ export function HeroSection() {
         <div className="mt-1 font-mono text-lg tabular-nums text-white/90">
           {sastTime ?? "--:--:--"}
         </div>
-        <Link href="/contact#booking" className="relative mt-3 inline-block">
-          <span className="font-[family-name:var(--font-accent)] text-[3rem] italic leading-none text-primary sm:text-[3.5rem]">
-            Book now, Time is Ticking...
-          </span>
-          <svg
-            viewBox="0 0 200 20"
-            className="absolute -bottom-3 left-0 w-full text-primary"
-            preserveAspectRatio="none"
-            aria-hidden="true"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <Link
+            href="/contact#booking"
+            className="inline-block font-[family-name:var(--font-accent)] text-[3rem] italic leading-tight text-primary underline decoration-primary decoration-2 underline-offset-[0.4em] sm:text-[3.5rem]"
           >
-            <motion.path
-              d="M2 12 C 50 4, 150 4, 198 10"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            />
-          </svg>
-        </Link>
+            Book now, Time is Ticking...
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
