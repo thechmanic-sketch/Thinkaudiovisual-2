@@ -1,14 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { whatsappHref } from "@/lib/site-config";
+import { assetPath } from "@/lib/asset-path";
 
 export function CtaBand() {
   return (
-    <section className="border-b border-border/60 bg-[#0f2118]">
-      <div className="mx-auto max-w-3xl px-6 py-24 text-center">
+    <section className="relative overflow-hidden border-b border-border/60 bg-[#0f2118]">
+      <Image
+        src={assetPath("/images/pa-system-trussing.webp")}
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover opacity-25"
+        priority={false}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0f2118]/60 via-[#0f2118]/85 to-[#0f2118]" />
+
+      <div className="relative mx-auto max-w-3xl px-6 py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
