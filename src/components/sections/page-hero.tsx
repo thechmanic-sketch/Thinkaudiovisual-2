@@ -17,14 +17,26 @@ export function PageHero({
 }) {
   return (
     <section className="relative flex h-[60vh] min-h-[420px] items-end overflow-hidden border-b border-border/60 bg-black">
-      <Image
-        src={assetPath(image)}
-        alt={imageAlt}
-        fill
-        sizes="100vw"
-        priority
-        className="object-cover opacity-70"
-      />
+      <motion.div
+        initial={{ scale: 1, x: 0, y: 0 }}
+        animate={{ scale: 1.15, x: "-2%", y: "-2%" }}
+        transition={{
+          duration: 16,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+        }}
+        className="absolute inset-0"
+      >
+        <Image
+          src={assetPath(image)}
+          alt={imageAlt}
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover opacity-70"
+        />
+      </motion.div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
       <motion.div
