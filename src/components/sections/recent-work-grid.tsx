@@ -77,8 +77,8 @@ export function RecentWorkGrid() {
   return (
     <section className="border-b border-border/60 bg-black">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:px-10">
-        <div className="max-w-xl text-left sm:max-w-2xl">
-          <p className="text-xl leading-snug text-foreground sm:text-2xl lg:text-3xl">
+        <div className="w-full text-left">
+          <p className="text-xl leading-snug text-foreground sm:text-2xl lg:text-4xl">
             Your event deserves a production that lands. We build the sound,
             stage, lighting and AV that come together into a{" "}
             <span className="relative inline-block font-[family-name:var(--font-accent)] italic">
