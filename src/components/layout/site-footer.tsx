@@ -5,7 +5,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-[#081209]">
       <div className="mx-auto max-w-7xl px-6 py-10 sm:px-10">
-        <div className="grid grid-cols-2 gap-8 sm:flex sm:items-start sm:justify-between">
+        <div className="grid grid-cols-2 gap-8 text-center sm:flex sm:items-start sm:justify-between sm:text-left">
           <div className="col-span-2">
             <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               Contact
@@ -75,7 +75,7 @@ export function SiteFooter() {
         </Link>
       </div>
 
-      <div className="mx-auto flex max-w-7xl flex-col gap-2 border-t border-border/60 px-6 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 border-t border-border/60 px-6 py-6 text-center text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:text-left">
         <span>© {new Date().getFullYear()} Think Audio Visual. All rights reserved.</span>
         <span>Privacy respected under POPIA — booking details are only used to respond to your enquiry.</span>
       </div>
