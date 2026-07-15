@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { assetPath } from "@/lib/asset-path";
 
 const stats = [
   { value: "500+", label: "Events delivered" },
@@ -22,7 +23,7 @@ export function PhotoQuoteStats() {
     <section className="border-b border-border/60 bg-black">
       <div className="relative flex h-[70vh] min-h-[420px] items-end overflow-hidden">
         <Image
-          src="/images/foh-concert-silhouette.jpg"
+          src={assetPath("/images/foh-concert-silhouette.jpg")}
           alt="Front-of-house sound engineer at a live concert"
           fill
           sizes="100vw"

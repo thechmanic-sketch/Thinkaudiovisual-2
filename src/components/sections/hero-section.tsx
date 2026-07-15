@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Pause, Play } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -26,8 +27,8 @@ export function HeroSection() {
         <video
           ref={videoRef}
           className="size-full object-cover"
-          src="/videos/hero-background.mp4"
-          poster="/images/ballroom-conference.jpg"
+          src={assetPath("/videos/hero-background.mp4")}
+          poster={assetPath("/images/ballroom-conference.jpg")}
           autoPlay
           muted
           loop

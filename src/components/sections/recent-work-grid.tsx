@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 const projects = [
   {
@@ -64,7 +65,7 @@ export function RecentWorkGrid() {
               className={`group relative overflow-hidden rounded-2xl border border-border/70 bg-card ${p.aspect} ${p.span}`}
             >
               <Image
-                src={p.image}
+                src={assetPath(p.image)}
                 alt={p.title}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
