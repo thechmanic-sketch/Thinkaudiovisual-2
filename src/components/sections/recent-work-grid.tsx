@@ -94,12 +94,12 @@ export function RecentWorkGrid() {
         </div>
 
         {/* Staggered layout: left column stacks cards 1 & 3, right column card 2 offset down */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          <div className="flex flex-col gap-6">
+        <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:gap-16">
+          <div className="flex flex-col gap-12">
             <ProjectCard project={projects[0]} delay={0} />
             <ProjectCard project={projects[2]} delay={0.2} />
           </div>
-          <div className="sm:mt-20">
+          <div className="sm:mt-36">
             <ProjectCard project={projects[1]} delay={0.1} className="sm:aspect-[4/5]" />
           </div>
         </div>
