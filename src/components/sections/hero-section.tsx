@@ -113,16 +113,32 @@ export function HeroSection() {
       </motion.div>
 
       {/* Metadata, top area */}
-      <div className="absolute right-6 top-6 text-right sm:right-12 sm:top-12 lg:right-16 lg:top-16">
+      <div className="absolute right-6 top-6 max-w-[90vw] text-right sm:right-12 sm:top-12 lg:right-16 lg:top-16">
         <div className="text-xs text-white/50">South Africa</div>
         <div className="mt-1 font-mono text-lg tabular-nums text-white/90">
           {sastTime ?? "--:--:--"}
         </div>
-        <Link
-          href="/contact#booking"
-          className="mt-2 block font-[family-name:var(--font-accent)] text-base italic text-primary underline underline-offset-4"
-        >
-          Book now, Time is Ticking...
+        <Link href="/contact#booking" className="relative mt-3 inline-block">
+          <span className="font-[family-name:var(--font-accent)] text-[3rem] italic leading-none text-primary sm:text-[3.5rem]">
+            Book now, Time is Ticking...
+          </span>
+          <svg
+            viewBox="0 0 200 20"
+            className="absolute -bottom-3 left-0 w-full text-primary"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <motion.path
+              d="M2 12 C 50 4, 150 4, 198 10"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            />
+          </svg>
         </Link>
       </div>
     </section>
