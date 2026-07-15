@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 
 const services = [
@@ -20,12 +17,31 @@ const services = [
     title: "Stage & Rigging",
     body: "Performance stages, trussing and podium builds engineered for safety and built to spec.",
   },
+  {
+    num: "04 — Audio Visual",
+    title: "Screens & Presentation",
+    body: "LED screens, projection, data projectors and live streaming for conferences and brand activations.",
+  },
 ];
 
+function ServiceCard({ service }: { service: (typeof services)[number] }) {
+  return (
+    <div className="w-[80vw] shrink-0 rounded-2xl border border-border/70 bg-card p-8 sm:w-[45vw] lg:w-[calc(25vw-1.125rem)]">
+      <span className="text-xs font-medium uppercase tracking-widest text-primary">
+        {service.num}
+      </span>
+      <h3 className="mt-4 text-xl font-semibold">{service.title}</h3>
+      <p className="mt-3 text-sm text-muted-foreground">{service.body}</p>
+    </div>
+  );
+}
+
 export function ServicesPreview() {
+  const loop = [...services, ...services];
+
   return (
     <section className="border-b border-border/60">
-      <div className="mx-auto max-w-7xl px-6 py-24">
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:px-10">
         <div className="max-w-2xl">
           <div className="text-sm font-medium uppercase tracking-widest text-primary">
             What We Do
@@ -39,29 +55,22 @@ export function ServicesPreview() {
             without a hitch.
           </p>
         </div>
+      </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <motion.div
-              key={s.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl border border-border/70 bg-card p-8"
-            >
-              <span className="text-xs font-medium uppercase tracking-widest text-primary">
-                {s.num}
-              </span>
-              <h3 className="mt-4 text-xl font-semibold">{s.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{s.body}</p>
-            </motion.div>
+      <div
+        className="group mt-14 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_5%,black_95%,transparent)]"
+      >
+        <div className="animate-marquee flex w-max gap-6 group-hover:[animation-play-state:paused]">
+          {loop.map((s, i) => (
+            <ServiceCard key={`${s.title}-${i}`} service={s} />
           ))}
         </div>
+      </div>
 
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-14 sm:px-10">
         <Link
           href="/services"
-          className="group mt-10 inline-flex items-center gap-2 text-sm font-medium text-foreground"
+          className="group inline-flex items-center gap-2 text-sm font-medium text-foreground"
         >
           View All Services
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
