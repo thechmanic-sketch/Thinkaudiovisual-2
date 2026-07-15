@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Think Audio Visual",
-  tagline: "Stage, sound, lighting and AV production for events across South Africa and Zimbabwe.",
+  tagline: "Stage, sound, lighting and AV production for events across South Africa.",
   phone: "+27 31 811 1311",
   phoneHref: "tel:+27318111311",
   cell: "+27 83 418 0085",

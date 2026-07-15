@@ -93,7 +93,7 @@ export default function AboutPage() {
         <StatBand
           eyebrow="Our Commitment"
           headline="500+ events delivered. 12+ years of getting it right."
-          caption="Based in Durban. Working across South Africa and Zimbabwe."
+          caption="Based in Durban. Working across South Africa."
           image="/images/pa-system-trussing.webp"
           imageAlt="PA system and trussing rig with blue stage lighting"
         />

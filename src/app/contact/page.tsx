@@ -20,7 +20,7 @@ const infoBlocks = [
   { label: "Address", value: siteConfig.address },
   {
     label: "Operating Area",
-    value: "Durban & surrounds, available for events across South Africa and Zimbabwe.",
+    value: "Durban & surrounds, available for events across South Africa.",
   },
 ];
 

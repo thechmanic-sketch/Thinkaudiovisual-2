@@ -1,6 +1,6 @@
 # Think Audio Visual
 
-Marketing site for Think Audio Visual — stage, sound, lighting and AV production for events across South Africa and Zimbabwe.
+Marketing site for Think Audio Visual — stage, sound, lighting and AV production for events across South Africa.
 
 Live: https://thechmanic-sketch.github.io/Thinkaudiovisual-2/
 

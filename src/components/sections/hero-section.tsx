@@ -1,13 +1,35 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { Pause, Play } from "lucide-react";
 import { assetPath } from "@/lib/asset-path";
 
+function useSastClock() {
+  const [time, setTime] = useState<string | null>(null);
+
+  useEffect(() => {
+    const formatter = new Intl.DateTimeFormat("en-ZA", {
+      timeZone: "Africa/Johannesburg",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    });
+    const tick = () => setTime(formatter.format(new Date()));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return time;
+}
+
 export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(true);
+  const sastTime = useSastClock();
 
   function togglePlay() {
     const video = videoRef.current;
@@ -91,9 +113,17 @@ export function HeroSection() {
       </motion.div>
 
       {/* Metadata, top area */}
-      <div className="absolute right-6 top-6 text-right text-xs text-white/50 sm:right-12 sm:top-12 lg:right-16 lg:top-16">
-        <div>Durban</div>
-        <div>South Africa</div>
+      <div className="absolute right-6 top-6 text-right sm:right-12 sm:top-12 lg:right-16 lg:top-16">
+        <div className="text-xs text-white/50">South Africa</div>
+        <div className="mt-1 font-mono text-lg tabular-nums text-white/90">
+          {sastTime ?? "--:--:--"}
+        </div>
+        <Link
+          href="/contact#booking"
+          className="mt-2 block font-[family-name:var(--font-accent)] text-base italic text-primary underline underline-offset-4"
+        >
+          Book now, Time is Ticking...
+        </Link>
       </div>
     </section>
   );
