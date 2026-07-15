@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 
 const stats = [
@@ -19,12 +20,15 @@ const clients = [
 export function PhotoQuoteStats() {
   return (
     <section className="border-b border-border/60 bg-black">
-      {/* Photo placeholder — swap for real event photography */}
       <div className="relative flex h-[70vh] min-h-[420px] items-end overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#1c1d1e,#0a0b0b_75%)]" />
-        <div className="absolute inset-0 flex items-center justify-center text-xs uppercase tracking-widest text-white/20">
-          Photo placeholder
-        </div>
+        <Image
+          src="/images/foh-concert-silhouette.jpg"
+          alt="Front-of-house sound engineer at a live concert"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority={false}
+        />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent" />
 
         <motion.blockquote

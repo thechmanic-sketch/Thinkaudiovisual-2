@@ -1,28 +1,32 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    tag: "Development",
+    tag: "Staging",
     title: "Awards Evening Staging",
     sub: "Corporate Gala",
+    image: "/images/gala-stage.jpg",
     span: "lg:col-span-2",
     aspect: "aspect-[16/10]",
   },
   {
-    tag: "Development",
+    tag: "Lighting",
     title: "Concert Lighting Rig",
     sub: "Live Event",
+    image: "/images/concert-lighting-rig.jpg",
     span: "",
     aspect: "aspect-[4/5]",
   },
   {
-    tag: "Development",
-    title: "LED Screen Activation",
-    sub: "Brand Activation",
+    tag: "Brand Activation",
+    title: "Nedbank Screen Activation",
+    sub: "LED Screens",
+    image: "/images/nedbank-activation.jpg",
     span: "",
     aspect: "aspect-[4/5]",
   },
@@ -59,9 +63,13 @@ export function RecentWorkGrid() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`group relative overflow-hidden rounded-2xl border border-border/70 bg-card ${p.aspect} ${p.span}`}
             >
-              <div className="flex size-full items-center justify-center bg-[linear-gradient(155deg,#1a1c1d,#0b0c0d)] text-xs text-muted-foreground/40">
-                Image placeholder
-              </div>
+              <Image
+                src={p.image}
+                alt={p.title}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
 
               <span className="absolute left-4 top-4 rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium uppercase tracking-wide text-white backdrop-blur-sm">
                 {p.tag}
