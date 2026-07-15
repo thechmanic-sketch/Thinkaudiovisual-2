@@ -3,19 +3,12 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { assetPath } from "@/lib/asset-path";
+import { ClientLogos } from "@/components/sections/client-logos";
 
 const stats = [
   { value: "500+", label: "Events delivered" },
   { value: "150+", label: "Corporate clients" },
   { value: "12+", label: "Years experience" },
-];
-
-const clients: { name: string; logo?: string }[] = [
-  { name: "Nedbank" },
-  { name: "SABC" },
-  { name: "Corporate Conferences" },
-  { name: "Community Halls & Churches" },
-  { name: "Private Functions" },
 ];
 
 export function PhotoQuoteStats() {
@@ -84,34 +77,7 @@ export function PhotoQuoteStats() {
         </div>
 
         <div className="mt-16">
-          <p className="text-sm text-muted-foreground">
-            <span className="font-[family-name:var(--font-accent)] italic text-foreground">
-              Clients
-            </span>{" "}
-            we have worked with
-          </p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-            {clients.map((client) => (
-              <div
-                key={client.name}
-                className="flex h-20 items-center justify-center rounded-xl border border-border/70 bg-card px-4"
-              >
-                {client.logo ? (
-                  <Image
-                    src={assetPath(client.logo)}
-                    alt={client.name}
-                    width={120}
-                    height={40}
-                    className="max-h-10 w-auto object-contain opacity-80 grayscale transition-opacity hover:opacity-100 hover:grayscale-0"
-                  />
-                ) : (
-                  <span className="text-center text-xs text-foreground/60">
-                    {client.name}
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
+          <ClientLogos />
         </div>
       </div>
     </section>
