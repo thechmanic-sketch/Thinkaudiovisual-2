@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { RecentWorkGrid } from "@/components/sections/recent-work-grid";
 import { PhotoQuoteStats } from "@/components/sections/photo-quote-stats";
 import { ServicesPreview } from "@/components/sections/services-preview";
+import { QuickQuoteCard } from "@/components/sections/quick-quote-card";
 import { CtaBand } from "@/components/sections/cta-band";
 
 export default function Home() {
@@ -16,6 +17,10 @@ export default function Home() {
         <RecentWorkGrid />
         <PhotoQuoteStats />
         <ServicesPreview />
+        <QuickQuoteCard
+          image="/images/gala-stage.jpg"
+          imageAlt="Gala stage with blue draping and floral staging"
+        />
         <CtaBand />
       </main>
       <SiteFooter />

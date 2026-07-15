@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsappFloat } from "@/components/layout/whatsapp-float";
 import { PageHero } from "@/components/sections/page-hero";
+import { FloatingStatHero } from "@/components/sections/floating-stat-hero";
 import { StatBand } from "@/components/sections/stat-band";
 import { CtaBand } from "@/components/sections/cta-band";
 import { ClientLogos } from "@/components/sections/client-logos";
@@ -74,35 +75,20 @@ export default function AboutPage() {
           imageAlt="Gala stage with blue draping and floral staging"
         />
 
-        <section className="border-b border-border/60">
-          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-2 lg:items-center">
-            <div>
-              <div className="text-sm font-medium uppercase tracking-widest text-primary">
-                Leadership
-              </div>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-                Managed by T. Masango, Owner &amp; Director.
-              </h2>
-              <p className="mt-5 text-muted-foreground">
-                Under the management of a skilled and experienced
-                owner-director, our clients are guaranteed optimum service at
-                all times. Over 10 years in sound and audio-visual work shows
-                in the dedication and passion we bring to every event — from
-                an intimate conference to a full-scale festival stage.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border/70 bg-card p-10">
-              <span className="text-xs font-medium uppercase tracking-widest text-primary">
-                Our Vision
-              </span>
-              <h3 className="mt-4 text-2xl font-semibold leading-snug">
-                To become the most renowned professional audio visual company
-                in South Africa.
-              </h3>
-            </div>
-          </div>
-        </section>
+        <FloatingStatHero
+          eyebrow="Leadership"
+          title="Managed by T. Masango, Owner & Director."
+          body="Under the management of a skilled and experienced owner-director, our clients are guaranteed optimum service at all times — from an intimate conference to a full-scale festival stage. Our vision: to become the most renowned professional audio visual company in South Africa."
+          ctaLabel="More About Us"
+          ctaHref="/contact#booking"
+          image="/images/ballroom-conference.jpg"
+          imageAlt="Ballroom fitted with dual presentation screens and pin lighting"
+          stats={[
+            { icon: "calendar", value: "500+", label: "Events delivered" },
+            { icon: "users", value: "150+", label: "Corporate clients" },
+            { icon: "clock", value: "12+", label: "Years experience" },
+          ]}
+        />
 
         <StatBand
           eyebrow="Our Commitment"
