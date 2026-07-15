@@ -5,7 +5,7 @@ import { assetPath } from "@/lib/asset-path";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/60 bg-[#081209]">
+    <footer className="border-t border-border/60 bg-surface-deep">
       <div className="mx-auto max-w-7xl px-6 py-10 sm:px-10">
         <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-4 sm:text-left">
           <div className="col-span-2 flex justify-center sm:col-span-1 sm:justify-start">

@@ -18,7 +18,7 @@ export function StatBand({
   imageAlt: string;
 }) {
   return (
-    <section className="border-b border-border/60 bg-[#0d1710]">
+    <section className="border-b border-border/60 bg-surface-tint">
       <div className="mx-auto max-w-5xl px-6 pb-14 pt-20 text-center sm:px-10">
         <span className="inline-block rounded-full border border-border/70 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary">
           {eyebrow}

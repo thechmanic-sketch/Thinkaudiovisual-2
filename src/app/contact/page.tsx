@@ -44,7 +44,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <section id="booking" className="bg-[#0d1710]">
+        <section id="booking" className="bg-surface-tint">
           <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-[0.9fr_1.3fr]">
             <div>
               {infoBlocks.map((block) => (

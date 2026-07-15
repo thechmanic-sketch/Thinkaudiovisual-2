@@ -4,17 +4,24 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #0b0c0d;
-  --foreground: #f2f3f1;
-  --card: #131415;
-  --card-foreground: #f2f3f1;
-  --border: rgba(242, 243, 241, 0.1);
-  --muted-foreground: #9a9d99;
-  --primary: #22c55e;
-  --primary-foreground: #06140a;
-  --accent: #22c55e;
+  /* Base surfaces — one hue family, stepped, instead of ad-hoc greys/greens */
+  --background: #0a0d0b;
+  --foreground: #eef2f0;
+  --card: #121a16;
+  --card-foreground: #eef2f0;
+  --surface-tint: #0e1613;
+  --surface-tint-strong: #10221a;
+  --surface-deep: #070b08;
+  --card-alt: #16211c;
+  --border: rgba(230, 245, 238, 0.08);
+  --muted-foreground: #93a39b;
+
+  /* Refined emerald accent — replaces the flat neon green */
+  --primary: #10b981;
+  --primary-foreground: #052e1f;
+  --accent: #10b981;
   --whatsapp: #25d366;
-  --ring: #22c55e;
+  --ring: #10b981;
   --radius: 0.75rem;
 }
 
@@ -23,6 +30,10 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-surface-tint: var(--surface-tint);
+  --color-surface-tint-strong: var(--surface-tint-strong);
+  --color-surface-deep: var(--surface-deep);
+  --color-card-alt: var(--card-alt);
   --color-border: var(--border);
   --color-muted-foreground: var(--muted-foreground);
   --color-primary: var(--primary);

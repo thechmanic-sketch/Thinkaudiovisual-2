@@ -98,7 +98,7 @@ export default function AboutPage() {
           imageAlt="PA system and trussing rig with blue stage lighting"
         />
 
-        <section className="border-b border-border/60 bg-[#0f2118]">
+        <section className="border-b border-border/60 bg-surface-tint-strong">
           <div className="mx-auto max-w-7xl px-6 py-24 sm:px-10">
             <div className="max-w-2xl">
               <div className="text-sm font-medium uppercase tracking-widest text-primary">

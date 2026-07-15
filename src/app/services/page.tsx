@@ -121,13 +121,13 @@ export default function ServicesPage() {
           items={divisions}
         />
 
-        <section className="border-b border-border/60 bg-[#0d1710]">
+        <section className="border-b border-border/60 bg-surface-tint">
           <div className="mx-auto max-w-7xl px-6 py-24 sm:px-10">
             <div className="grid gap-6 sm:grid-cols-2">
               {detailedServices.map((s) => (
                 <div
                   key={s.num}
-                  className="rounded-2xl border border-border/70 bg-[#122015] p-8"
+                  className="rounded-2xl border border-border/70 bg-card-alt p-8"
                 >
                   <span className="text-xs font-medium uppercase tracking-widest text-primary">
                     {s.num}

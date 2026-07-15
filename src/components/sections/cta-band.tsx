@@ -19,7 +19,7 @@ export function CtaBand() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden border-b border-border/60 bg-[#0f2118]"
+      className="relative overflow-hidden border-b border-border/60 bg-surface-tint-strong"
     >
       <motion.div style={{ y }} className="absolute inset-0 -top-[15%] -bottom-[15%]">
         <Image

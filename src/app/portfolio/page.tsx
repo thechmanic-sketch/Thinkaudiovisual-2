@@ -64,7 +64,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="border-b border-border/60 bg-[#0d1710]">
+        <section className="border-b border-border/60 bg-surface-tint">
           <div className="mx-auto max-w-4xl px-6 py-24 text-center sm:px-10">
             <div className="text-sm font-medium uppercase tracking-widest text-primary">
               What Clients Say
