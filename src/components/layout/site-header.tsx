@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/lib/site-config";
+import { assetPath } from "@/lib/asset-path";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -12,9 +14,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-          <span className="text-primary">Think</span>
-          <span>Audio Visual</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src={assetPath("/images/logo-mark.png")}
+            alt="Think Audio Visual"
+            width={686}
+            height={306}
+            priority
+            className="h-10 w-auto sm:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

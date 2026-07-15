@@ -1,12 +1,26 @@
 import Link from "next/link";
+import Image from "next/image";
 import { navLinks, siteConfig } from "@/lib/site-config";
+import { assetPath } from "@/lib/asset-path";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-[#081209]">
       <div className="mx-auto max-w-7xl px-6 py-10 sm:px-10">
-        <div className="grid grid-cols-2 gap-8 text-center sm:flex sm:items-start sm:justify-between sm:text-left">
-          <div className="col-span-2">
+        <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-4 sm:text-left">
+          <div className="col-span-2 flex justify-center sm:col-span-1 sm:justify-start">
+            <Link href="/">
+              <Image
+                src={assetPath("/images/logo-mark.png")}
+                alt="Think Audio Visual"
+                width={686}
+                height={306}
+                className="h-10 w-auto"
+              />
+            </Link>
+          </div>
+
+          <div className="col-span-2 sm:col-span-1">
             <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               Contact
             </h4>

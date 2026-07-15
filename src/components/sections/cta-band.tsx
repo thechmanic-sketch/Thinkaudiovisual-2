@@ -1,23 +1,36 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { whatsappHref } from "@/lib/site-config";
 import { assetPath } from "@/lib/asset-path";
 
 export function CtaBand() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
+
   return (
-    <section className="relative overflow-hidden border-b border-border/60 bg-[#0f2118]">
-      <Image
-        src={assetPath("/images/pa-system-trussing.webp")}
-        alt=""
-        fill
-        sizes="100vw"
-        className="object-cover opacity-25"
-        priority={false}
-      />
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden border-b border-border/60 bg-[#0f2118]"
+    >
+      <motion.div style={{ y }} className="absolute inset-0 -top-[15%] -bottom-[15%]">
+        <Image
+          src={assetPath("/images/pa-system-trussing.webp")}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-25"
+          priority={false}
+        />
+      </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#0f2118]/60 via-[#0f2118]/85 to-[#0f2118]" />
 
       <div className="relative mx-auto max-w-3xl px-6 py-24 text-center">
