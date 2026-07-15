@@ -28,13 +28,16 @@ export function HeroSection() {
           ref={videoRef}
           className="size-full object-cover"
           src={assetPath("/videos/hero-background.mp4")}
-          poster={assetPath("/images/ballroom-conference.jpg")}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
         />
       </div>
+
+      {/* Black overlay for legibility */}
+      <div className="pointer-events-none absolute inset-0 bg-black/45" />
 
       {/* Bottom gradient for text legibility */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
