@@ -37,19 +37,18 @@ export function RecentWorkGrid() {
   return (
     <section className="border-b border-border/60 bg-black">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:px-10">
-        <div className="max-w-xl">
-          <p className="text-lg leading-relaxed text-foreground/80 sm:text-xl">
-            Your <em className="font-[family-name:var(--font-accent)] not-italic italic text-primary">event story</em>{" "}
-            deserves a production that lands. We build the sound, stage,
-            lighting and AV that come together into a{" "}
+        <div className="max-w-3xl">
+          <p className="text-2xl leading-snug text-foreground sm:text-3xl lg:text-4xl">
+            Your event deserves a production that lands. We build the sound,
+            stage, lighting and AV that come together into a{" "}
             <span className="relative inline-block font-[family-name:var(--font-accent)] italic">
-              memorable experience
+              seamless experience
               <span className="absolute -bottom-1 left-0 h-px w-full bg-primary" />
             </span>
             . With reliable equipment we help events reach{" "}
-            <em className="font-[family-name:var(--font-accent)] not-italic italic text-primary">
+            <span className="font-[family-name:var(--font-accent)] italic text-primary">
               extreme production value
-            </em>
+            </span>
             .
           </p>
         </div>

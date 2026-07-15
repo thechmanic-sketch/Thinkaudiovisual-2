@@ -54,12 +54,13 @@ export function PhotoQuoteStats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="max-w-sm text-sm leading-relaxed text-muted-foreground"
+            className="max-w-md text-xl leading-snug text-foreground sm:text-2xl"
           >
-            Under the management of owner-director T. Masango, Think Audio
-            Visual has spent over a decade building the technical backbone of
-            events across Durban and Southern Africa — from intimate
-            boardrooms to full festival stages.
+            We combine sound, lighting and stage production into{" "}
+            <span className="font-[family-name:var(--font-accent)] italic text-primary">
+              events people remember
+            </span>
+            , under the hands-on management of owner-director T. Masango.
           </motion.p>
 
           <div className="grid grid-cols-3 gap-6 border-t border-border/60 pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
