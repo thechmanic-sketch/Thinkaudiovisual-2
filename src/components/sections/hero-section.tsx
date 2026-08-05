@@ -50,6 +50,7 @@ export function HeroSection() {
           ref={videoRef}
           className="size-full object-cover"
           src={assetPath("/videos/hero-background.mp4")}
+          poster={assetPath("/images/foh-live-mixing.jpg")}
           autoPlay
           muted
           loop

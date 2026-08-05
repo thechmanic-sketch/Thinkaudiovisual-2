@@ -7,6 +7,12 @@ export type PortfolioItem = {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    image: "/images/foh-live-mixing.jpg",
+    title: "Live FOH Mixing",
+    tag: "Live Event",
+    category: "Live",
+  },
+  {
     image: "/images/ballroom-conference.jpg",
     title: "Ballroom Conference Setup",
     tag: "Corporate",
@@ -75,6 +81,36 @@ export const portfolioItems: PortfolioItem[] = [
   {
     image: "/images/foh-concert-silhouette.jpg",
     title: "Front of House",
+    tag: "Live Event",
+    category: "Live",
+  },
+  {
+    image: "/images/floor-monitor-speaker.webp",
+    title: "Floor Monitor Line-Up",
+    tag: "Sound",
+    category: "Live",
+  },
+  {
+    image: "/images/audio-console-stage.jpg",
+    title: "FOH Console at the Stage",
+    tag: "Live Event",
+    category: "Live",
+  },
+  {
+    image: "/images/mixing-console-detail.jpg",
+    title: "Console Detail",
+    tag: "Sound",
+    category: "Live",
+  },
+  {
+    image: "/images/empty-lit-stage.jpg",
+    title: "Stage Lighting Setup",
+    tag: "Live Event",
+    category: "Live",
+  },
+  {
+    image: "/images/mic-stand-bokeh.jpg",
+    title: "Mic & Stage Lights",
     tag: "Live Event",
     category: "Live",
   },
